@@ -8,7 +8,7 @@
 e13 x y z
    |x < y && x < z = (+) (y^2) (z^2)
    |y < z && y < x = (+) (x^2) (z^2)
-   |z < y && z < x = (+) (x^2) (y^2)
+   |otherwise = (+) (x^2) (y^2)
 
 --Exercise 1.4
 --Trivial
