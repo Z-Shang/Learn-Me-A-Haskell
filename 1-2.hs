@@ -26,3 +26,17 @@ pascal x
     sum_pre n = gen_lst(pascal(n))
     gen_lst (x:[]) = []
     gen_lst (x:xs) = [x + head(xs)] ++ gen_lst(xs)
+
+--Exercise 1.13
+phi :: Double -> Double
+phi n = ((1 + sqrt(5)) / 2) ** n
+
+psi :: Double -> Double
+psi n = ((1 - sqrt(5)) / 2) ** n
+
+fib :: Double -> Double
+fib 0 = 0
+fib 1 = 1
+fib n = fib(n - 1) + fib(n - 2)
+
+ex113 n = abs(fib(n) - (((phi n) - (psi n)) / sqrt(5))) < 1
